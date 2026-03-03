@@ -1,6 +1,3 @@
-ain · JS
-Copy
-
 /* ============================================================
    BETSALEEL MUKUBA — PORTFOLIO JAVASCRIPT v3
    Features: Preloader, Particles, Typed, Scroll, Counters,
@@ -31,12 +28,12 @@ const CONFIG = (() => {
 function saveConfig(){ try{ localStorage.setItem('bm_config',JSON.stringify(CONFIG)); }catch{} }
 
 /* ── PRELOADER ──────────────────────────────────────────── */
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    document.getElementById('preloader')?.classList.add('hidden');
-    initCounters();
-  }, 1900);
-});
+function hidePreloader() {
+  document.getElementById('preloader')?.classList.add('hidden');
+  initCounters();
+}
+const preloaderTimer = setTimeout(hidePreloader, 2500);
+window.addEventListener('load', () => { clearTimeout(preloaderTimer); setTimeout(hidePreloader, 800); });
 
 /* ── SCROLL ─────────────────────────────────────────────── */
 const scrollBar = document.getElementById('scroll-progress');
