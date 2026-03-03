@@ -1,3 +1,6 @@
+ain · JS
+Copy
+
 /* ============================================================
    BETSALEEL MUKUBA — PORTFOLIO JAVASCRIPT v3
    Features: Preloader, Particles, Typed, Scroll, Counters,
@@ -422,36 +425,26 @@ contactForm?.addEventListener('submit', async (e) => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, subject, message }),
     });
-    const data = await res.json();
+
+    let data;
+    try { data = await res.json(); } catch(_) { data = {}; }
 
     if(res.ok && data.success) {
       if(successEl){ successEl.style.display='flex'; setTimeout(()=>successEl.style.display='none',7000); }
       contactForm.reset();
     } else {
-      throw new Error(data.error || 'Server error');
+      /* Show the real server error so it's visible */
+      const msg = data.error || `Server responded with status ${res.status}`;
+      if(errEl){ errEl.textContent = msg; errEl.style.display='block'; }
+      console.error('Contact API error:', res.status, data);
     }
 
   } catch(apiErr) {
-    console.warn('API unavailable, trying EmailJS fallback:', apiErr.message);
-    try {
-      /* FALLBACK: EmailJS (if configured in Admin Panel) */
-      if(typeof emailjs !== 'undefined' && CONFIG.emailjsServiceId !== 'YOUR_SERVICE_ID'){
-        await emailjs.send(CONFIG.emailjsServiceId, CONFIG.emailjsTemplateId, {
-          from_name: name, from_email: email, subject: subject || 'Portfolio Contact',
-          message, to_email: CONFIG.email, reply_to: email,
-        });
-        if(successEl){ successEl.style.display='flex'; setTimeout(()=>successEl.style.display='none',7000); }
-        contactForm.reset();
-      } else {
-        /* LAST RESORT: mailto link */
-        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-        const sub  = encodeURIComponent(subject || 'Portfolio Contact');
-        window.open(`mailto:${CONFIG.email}?subject=${sub}&body=${body}`);
-        if(errEl){ errEl.textContent = 'Note: Email client opened as fallback. Serverless API requires deployment on Vercel.'; errEl.style.display='block'; }
-      }
-    } catch(ejsErr) {
-      console.error('All methods failed:', ejsErr);
-      if(errEl){ errEl.textContent = `Failed to send. Please email directly: ${CONFIG.email}`; errEl.style.display='block'; }
+    /* Network-level failure (API unreachable / not deployed) */
+    console.error('Contact API unreachable:', apiErr.message);
+    if(errEl){
+      errEl.textContent = `Could not reach the server. Please email directly: ${CONFIG.email}`;
+      errEl.style.display='block';
     }
   }
 
