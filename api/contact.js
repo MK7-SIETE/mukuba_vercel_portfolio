@@ -55,7 +55,6 @@ function isValidEmail(email) {
 
 /* ── Build owner notification email HTML ── */
 function buildOwnerEmail({ name, email, subject, message }) {
-  const iconReply = `<img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/gmail.svg" width="14" height="14" alt="Reply" style="vertical-align:middle;filter:invert(1);margin-right:6px;"/>`;
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,108 +62,75 @@ function buildOwnerEmail({ name, email, subject, message }) {
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>New Portfolio Message</title>
 </head>
-<body style="margin:0;padding:0;background:#060E1F;font-family:'Segoe UI',Helvetica,Arial,sans-serif;">
-  <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
-    <tr>
-      <td align="center" style="padding:40px 16px;">
-        <table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;">
+<body style="margin:0;padding:0;background:#F4F6F9;font-family:'Segoe UI',Helvetica,Arial,sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="background:#F4F6F9;">
+    <tr><td align="center" style="padding:40px 16px;">
+      <table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="max-width:580px;">
 
-          <!-- HEADER -->
-          <tr>
-            <td style="background:linear-gradient(135deg,#0F2460,#1344A8,#0369A1);border-radius:16px 16px 0 0;padding:32px 40px;">
-              <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
-                <tr>
-                  <td>
-                    <div style="font-size:9px;color:rgba(255,255,255,0.45);letter-spacing:3px;text-transform:uppercase;margin-bottom:6px;">Portfolio Notification</div>
-                    <div style="font-size:26px;font-weight:900;color:#ffffff;letter-spacing:2px;">BM<span style="color:#38BDF8;">.</span></div>
-                  </td>
-                  <td align="right">
-                    <div style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:8px;padding:8px 14px;display:inline-block;">
-                      <div style="font-size:10px;color:#BAE6FD;letter-spacing:1px;text-transform:uppercase;">New Message</div>
-                    </div>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
+        <!-- HEADER -->
+        <tr><td style="background:#0F172A;border-radius:12px 12px 0 0;padding:24px 40px;">
+          <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+            <tr>
+              <td>
+                <div style="font-size:20px;font-weight:900;color:#FFFFFF;letter-spacing:3px;">BM<span style="color:#3B82F6;">.</span></div>
+                <div style="font-size:9px;color:rgba(255,255,255,0.35);letter-spacing:2px;text-transform:uppercase;margin-top:2px;">Portfolio</div>
+              </td>
+              <td align="right">
+                <div style="display:inline-block;background:#1E3A5F;border:1px solid #2563EB;border-radius:6px;padding:6px 14px;">
+                  <span style="font-size:10px;color:#60A5FA;font-weight:700;letter-spacing:1px;text-transform:uppercase;">&#9993; New Message</span>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </td></tr>
 
-          <!-- ALERT STRIP -->
-          <tr>
-            <td style="background:#1344A8;padding:10px 40px;text-align:center;">
-              <span style="font-size:11px;color:#BFDBFE;letter-spacing:1px;">Someone just reached out through your portfolio contact form</span>
-            </td>
-          </tr>
+        <!-- BODY -->
+        <tr><td style="background:#FFFFFF;padding:40px 40px;">
 
-          <!-- BODY -->
-          <tr>
-            <td style="background:#0D1F45;padding:36px 40px;">
+          <p style="font-size:12px;color:#94A3B8;text-transform:uppercase;letter-spacing:1.5px;margin:0 0 4px 0;">Contact Form Submission</p>
+          <p style="font-size:22px;font-weight:700;color:#0F172A;margin:0 0 28px 0;">Someone reached out</p>
 
-              <!-- Sender fields -->
-              <table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="margin-bottom:20px;">
-                <tr>
-                  <td style="padding-bottom:10px;">
-                    <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
-                      <tr>
-                        <td style="background:#0A1628;border:1px solid rgba(37,99,235,0.25);border-radius:10px;padding:14px 18px;">
-                          <div style="font-size:9px;color:#38BDF8;text-transform:uppercase;letter-spacing:2px;margin-bottom:5px;">From</div>
-                          <div style="font-size:16px;font-weight:700;color:#F1F5F9;">${name}</div>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding-bottom:10px;">
-                    <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
-                      <tr>
-                        <td style="background:#0A1628;border:1px solid rgba(37,99,235,0.25);border-radius:10px;padding:14px 18px;">
-                          <div style="font-size:9px;color:#38BDF8;text-transform:uppercase;letter-spacing:2px;margin-bottom:5px;">Email</div>
-                          <div style="font-size:15px;color:#60A5FA;"><a href="mailto:${email}" style="color:#60A5FA;text-decoration:none;">${email}</a></div>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
-                      <tr>
-                        <td style="background:#0A1628;border:1px solid rgba(37,99,235,0.25);border-radius:10px;padding:14px 18px;">
-                          <div style="font-size:9px;color:#38BDF8;text-transform:uppercase;letter-spacing:2px;margin-bottom:5px;">Subject</div>
-                          <div style="font-size:15px;font-weight:600;color:#F1F5F9;">${subject || 'General Enquiry'}</div>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
+          <!-- Fields -->
+          <table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="border:1px solid #E2E8F0;border-radius:10px;overflow:hidden;margin-bottom:24px;">
+            <tr>
+              <td style="padding:14px 20px;border-bottom:1px solid #F1F5F9;background:#F8FAFC;">
+                <span style="font-size:9px;color:#94A3B8;text-transform:uppercase;letter-spacing:2px;display:block;margin-bottom:4px;">Name</span>
+                <span style="font-size:15px;font-weight:600;color:#0F172A;">${name}</span>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:14px 20px;border-bottom:1px solid #F1F5F9;">
+                <span style="font-size:9px;color:#94A3B8;text-transform:uppercase;letter-spacing:2px;display:block;margin-bottom:4px;">Email</span>
+                <a href="mailto:${email}" style="font-size:15px;color:#2563EB;text-decoration:none;font-weight:500;">${email}</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:14px 20px;background:#F8FAFC;">
+                <span style="font-size:9px;color:#94A3B8;text-transform:uppercase;letter-spacing:2px;display:block;margin-bottom:4px;">Subject</span>
+                <span style="font-size:15px;font-weight:600;color:#0F172A;">${subject || 'General Enquiry'}</span>
+              </td>
+            </tr>
+          </table>
 
-              <!-- Message block -->
-              <div style="font-size:9px;color:#475569;text-transform:uppercase;letter-spacing:2px;margin-bottom:10px;">Message</div>
-              <div style="background:#0A1628;border:1px solid rgba(37,99,235,0.25);border-left:3px solid #2563EB;border-radius:10px;padding:20px 20px;font-size:14px;color:#CBD5E1;line-height:1.8;white-space:pre-wrap;">${message}</div>
+          <!-- Message -->
+          <p style="font-size:9px;color:#94A3B8;text-transform:uppercase;letter-spacing:2px;margin:0 0 10px 0;">Message</p>
+          <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-left:3px solid #2563EB;border-radius:8px;padding:20px;font-size:14px;color:#334155;line-height:1.85;white-space:pre-wrap;margin-bottom:28px;">${message}</div>
 
-              <!-- Reply CTA -->
-              <div style="margin-top:28px;">
-                <a href="mailto:${email}?subject=Re: ${encodeURIComponent(subject || 'Your enquiry')}"
-                   style="display:inline-block;padding:13px 26px;background:linear-gradient(135deg,#1D4ED8,#0891B2);color:#ffffff;border-radius:9px;font-size:13px;font-weight:800;text-decoration:none;letter-spacing:0.5px;">
-                  ${iconReply} Reply to ${name}
-                </a>
-              </div>
-            </td>
-          </tr>
+          <!-- Reply CTA -->
+          <a href="mailto:${email}?subject=Re: ${encodeURIComponent(subject || 'Your enquiry')}"
+             style="display:inline-block;padding:13px 28px;background:#1D4ED8;color:#FFFFFF;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none;">
+            Reply to ${name} &rarr;
+          </a>
 
-          <!-- FOOTER -->
-          <tr>
-            <td style="background:#060E1F;border-radius:0 0 16px 16px;padding:18px 40px;border-top:1px solid rgba(255,255,255,0.04);text-align:center;">
-              <p style="font-size:10px;color:#1E293B;margin:0;">
-                Betsaleel Mukuba Portfolio &nbsp;&middot;&nbsp; Automated notification &nbsp;&middot;&nbsp; Do not forward
-              </p>
-            </td>
-          </tr>
+        </td></tr>
 
-        </table>
-      </td>
-    </tr>
+        <!-- FOOTER -->
+        <tr><td style="background:#F8FAFC;border-radius:0 0 12px 12px;padding:16px 40px;border-top:1px solid #E2E8F0;text-align:center;">
+          <p style="font-size:10px;color:#CBD5E1;margin:0;">Automated notification from your portfolio &nbsp;&middot;&nbsp; Do not forward</p>
+        </td></tr>
+
+      </table>
+    </td></tr>
   </table>
 </body>
 </html>`;
@@ -172,157 +138,139 @@ function buildOwnerEmail({ name, email, subject, message }) {
 
 /* ── Build auto-reply email HTML ── */
 function buildAutoReplyEmail({ name, subject }) {
-  /* Inline SVG icons — render in all email clients */
-  const iconGithub = `<img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" width="16" height="16" alt="GitHub" style="vertical-align:middle;filter:invert(1);margin-right:6px;"/>`;
-  const iconLinkedin = `<img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg" width="16" height="16" alt="LinkedIn" style="vertical-align:middle;filter:invert(58%) sepia(98%) saturate(600%) hue-rotate(180deg);margin-right:6px;"/>`;
-  const iconWhatsapp = `<img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/whatsapp.svg" width="16" height="16" alt="WhatsApp" style="vertical-align:middle;filter:invert(58%) sepia(60%) saturate(500%) hue-rotate(95deg);margin-right:6px;"/>`;
-  const iconPin = `<img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/googlemaps.svg" width="12" height="12" alt="Location" style="vertical-align:middle;filter:invert(1);opacity:0.5;margin-right:4px;"/>`;
-  const iconPhone = `<img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/signal.svg" width="12" height="12" alt="Phone" style="vertical-align:middle;filter:invert(1);opacity:0.5;margin-right:4px;"/>`;
+  const GITHUB_ICON   = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMiAwQzUuMzcgMCAwIDUuMzcgMCAxMmMwIDUuMzEgMy40MzUgOS43OTUgOC4yMDUgMTEuMzg1LjYuMTA1LjgyNS0uMjU1LjgyNS0uNTcgMC0uMjg1LS4wMTUtMS4yMy0uMDE1LTIuMjM1LTMuMDE1LjU1NS0zLjc5NS0uNzM1LTQuMDM1LTEuNDEtLjEzNS0uMzQ1LS43Mi0xLjQxLTEuMjMtMS42OTUtLjQyLS4yMjUtMS4wMi0uNzgtLjAxNS0uNzk1Ljk0NS0uMDE1IDEuNjIuODcgMS44NDUgMS4yMyAxLjA4IDEuODE1IDIuODA1IDEuMzA1IDMuNDk1Ljk5LjEwNS0uNzguNDItMS4zMDUuNzY1LTEuNjA1LTIuNjctLjMtNS40Ni0xLjMzNS01LjQ2LTUuOTI1IDAtMS4zMDUuNDY1LTIuMzg1IDEuMjMtMy4yMjUtLjEyLS4zLS41NC0xLjUzLjEyLTMuMTggMCAwIDEuMDA1LS4zMTUgMy4zIDEuMjMuOTYtLjI3IDEuOTgtLjQwNSAzLS40MDVzMi4wNC4xMzUgMyAuNDA1YzIuMjk1LTEuNTYgMy4zLTEuMjMgMy4zLTEuMjMuNjYgMS42NS4yNCAyLjg4LjEyIDMuMTguNzY1Ljg0IDEuMjMgMS45MDUgMS4yMyAzLjIyNSAwIDQuNjA1LTIuODA1IDUuNjI1LTUuNDc1IDUuOTI1LjQzNS4zNzUuODEgMS4wOTUuODEgMi4yMiAwIDEuNjA1LS4wMTUgMi44OTUtLjAxNSAzLjMgMCAuMzE1LjIyNS42OS44MjUuNTdBMTIuMDIgMTIuMDIgMCAwIDAgMjQgMTJjMC02LjYzLTUuMzctMTItMTItMTJ6Ii8+PC9zdmc+";
+  const LINKEDIN_ICON = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0yMC40NDcgMjAuNDUyaC0zLjU1NHYtNS41NjljMC0xLjMyOC0uMDI3LTMuMDM3LTEuODUyLTMuMDM3LTEuODUzIDAtMi4xMzYgMS40NDUtMi4xMzYgMi45Mzl2NS42NjdIOS4zNTFWOWgzLjQxNHYxLjU2MWguMDQ2Yy40NzctLjkgMS42MzctMS44NSAzLjM3LTEuODUgMy42MDEgMCA0LjI2NyAyLjM3IDQuMjY3IDUuNDU1djYuMjg2ek01LjMzNyA3LjQzM2EyLjA2MiAyLjA2MiAwIDAgMS0yLjA2My0yLjA2NSAyLjA2NCAyLjA2NCAwIDEgMSAyLjA2MyAyLjA2NXptMS43ODIgMTMuMDE5SDMuNTU1VjloMy41NjR2MTEuNDUyek0yMi4yMjUgMEgxLjc3MUMuNzkyIDAgMCAuNzc0IDAgMS43Mjl2MjAuNTQyQzAgMjMuMjI3Ljc5MiAyNCAxLjc3MSAyNGgyMC40NTFDMjMuMiAyNCAyNCAyMy4yMjcgMjQgMjIuMjcxVjEuNzI5QzI0IC43NzQgMjMuMiAwIDIyLjIyMiAwaC4wMDN6Ii8+PC9zdmc+";
+  const WHATSAPP_ICON = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xNy40NzIgMTQuMzgyYy0uMjk3LS4xNDktMS43NTgtLjg2Ny0yLjAzLS45NjctLjI3My0uMDk5LS40NzEtLjE0OC0uNjcuMTUtLjE5Ny4yOTctLjc2Ny45NjYtLjk0IDEuMTY0LS4xNzMuMTk5LS4zNDcuMjIzLS42NDQuMDc1LS4yOTctLjE1LTEuMjU1LS40NjMtMi4zOS0xLjQ3NS0uODgzLS43ODgtMS40OC0xLjc2MS0xLjY1My0yLjA1OS0uMTczLS4yOTctLjAxOC0uNDU4LjEzLS42MDYuMTM0LS4xMzMuMjk4LS4zNDcuNDQ2LS41Mi4xNDktLjE3NC4xOTgtLjI5OC4yOTgtLjQ5Ny4wOTktLjE5OC4wNS0uMzcxLS4wMjUtLjUyLS4wNzUtLjE0OS0uNjY5LTEuNjEyLS45MTYtMi4yMDctLjI0Mi0uNTc5LS40ODctLjUtLjY2OS0uNTEtLjE3My0uMDA4LS4zNzEtLjAxLS41Ny0uMDEtLjE5OCAwLS41Mi4wNzQtLjc5Mi4zNzItLjI3Mi4yOTctMS4wNCAxLjAxNi0xLjA0IDIuNDc5IDAgMS40NjIgMS4wNjUgMi44NzUgMS4yMTMgMy4wNzQuMTQ5LjE5OCAyLjA5NiAzLjIgNS4wNzcgNC40ODcuNzA5LjMwNiAxLjI2Mi40ODkgMS42OTQuNjI1LjcxMi4yMjcgMS4zNi4xOTUgMS44NzEuMTE4LjU3MS0uMDg1IDEuNzU4LS43MTkgMi4wMDYtMS40MTMuMjQ4LS42OTQuMjQ4LTEuMjg5LjE3My0xLjQxMy0uMDc0LS4xMjQtLjI3Mi0uMTk4LS41Ny0uMzQ3bS01LjQyMSA3LjQwM2gtLjAwNGE5Ljg3IDkuODcgMCAwIDEtNS4wMzEtMS4zNzhsLS4zNjEtLjIxNC0zLjc0MS45ODIuOTk4LTMuNjQ4LS4yMzUtLjM3NGE5Ljg2IDkuODYgMCAwIDEtMS41MS01LjI2Yy4wMDEtNS40NSA0LjQzNi05Ljg4NCA5Ljg4OC05Ljg4NCAyLjY0IDAgNS4xMjIgMS4wMyA2Ljk4OCAyLjg5OGE5LjgyNSA5LjgyNSAwIDAgMSAyLjg5MyA2Ljk5NGMtLjAwMyA1LjQ1LTQuNDM3IDkuODg0LTkuODg1IDkuODg0bTguNDEzLTE4LjI5N0ExMS44MTUgMTEuODE1IDAgMCAwIDEyLjA1IDBDNS40OTUgMCAuMTYgNS4zMzUuMTU3IDExLjg5MmMwIDIuMDk2LjU0NyA0LjE0MiAxLjU4OCA1Ljk0NUwuMDU3IDI0bDYuMzA1LTEuNjU0YTExLjg4MiAxMS44ODIgMCAwIDAgNS42ODMgMS40NDhoLjAwNWM2LjU1NCAwIDExLjg5LTUuMzM1IDExLjg5My0xMS44OTNhMTEuODIxIDExLjgyMSAwIDAgMC0zLjQ4LTguNDEzeiIvPjwvc3ZnPg==";
+  const year = new Date().getFullYear();
+  const dateStr = new Date().toLocaleDateString('en-GB', {day:'numeric', month:'short', year:'numeric'});
 
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Thanks for reaching out</title>
+  <title>We received your message</title>
 </head>
-<body style="margin:0;padding:0;background:#060E1F;font-family:'Segoe UI',Helvetica,Arial,sans-serif;">
-  <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
-    <tr>
-      <td align="center" style="padding:40px 16px;">
+<body style="margin:0;padding:0;background:#F4F6F9;font-family:'Segoe UI',Helvetica,Arial,sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="background:#F4F6F9;">
+    <tr><td align="center" style="padding:40px 16px;">
+      <table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="max-width:580px;">
 
-        <!-- CARD -->
-        <table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;">
+        <!-- HEADER -->
+        <tr><td style="background:#0F172A;border-radius:12px 12px 0 0;padding:32px 40px;text-align:center;">
+          <div style="font-size:9px;color:rgba(255,255,255,0.35);letter-spacing:4px;text-transform:uppercase;margin-bottom:10px;">Portfolio</div>
+          <div style="font-size:28px;font-weight:900;color:#FFFFFF;letter-spacing:4px;">BM<span style="color:#3B82F6;">.</span></div>
+          <div style="width:40px;height:2px;background:#3B82F6;margin:14px auto 0;border-radius:2px;"></div>
+        </td></tr>
 
-          <!-- ░░ HEADER ░░ -->
-          <tr>
-            <td style="background:linear-gradient(135deg,#0F2460 0%,#1344A8 50%,#0369A1 100%);border-radius:16px 16px 0 0;padding:44px 40px;text-align:center;">
-              <!-- Logo wordmark -->
-              <div style="font-size:11px;color:rgba(255,255,255,0.5);letter-spacing:4px;text-transform:uppercase;margin-bottom:16px;">Portfolio</div>
-              <div style="font-size:36px;font-weight:900;color:#ffffff;letter-spacing:3px;line-height:1;">BM<span style="color:#38BDF8;">.</span></div>
-              <div style="margin-top:14px;display:inline-block;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:20px;padding:5px 16px;">
-                <span style="font-size:11px;color:#BAE6FD;letter-spacing:2px;text-transform:uppercase;">Software Engineer &nbsp;&middot;&nbsp; Full Stack Developer</span>
-              </div>
-            </td>
-          </tr>
+        <!-- STATUS BAR -->
+        <tr><td style="background:#1E293B;padding:12px 40px;">
+          <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+            <tr>
+              <td>
+                <table cellpadding="0" cellspacing="0" role="presentation">
+                  <tr>
+                    <td style="width:8px;height:8px;background:#22C55E;border-radius:50%;"></td>
+                    <td style="padding-left:8px;font-size:11px;color:#94A3B8;">Message successfully received</td>
+                  </tr>
+                </table>
+              </td>
+              <td align="right"><span style="font-size:10px;color:#475569;">${dateStr}</span></td>
+            </tr>
+          </table>
+        </td></tr>
 
-          <!-- ░░ CONFIRMATION BANNER ░░ -->
-          <tr>
-            <td style="background:#0D1F45;padding:0 40px;">
-              <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
-                <tr>
-                  <td style="padding:24px 20px;background:#0F2A5E;border-radius:0 0 12px 12px;text-align:center;border-bottom:3px solid #2563EB;">
-                    <!-- Checkmark circle -->
-                    <div style="width:52px;height:52px;background:linear-gradient(135deg,#16A34A,#15803D);border-radius:50%;margin:0 auto 12px;line-height:52px;text-align:center;">
-                      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/checkmarx.svg" width="24" height="24" alt="Sent" style="vertical-align:middle;filter:invert(1);margin-top:14px;"/>
-                    </div>
-                    <div style="font-size:18px;font-weight:800;color:#F0FDF4;margin-bottom:4px;">Message Received</div>
-                    <div style="font-size:13px;color:#86EFAC;">Your enquiry has been successfully delivered</div>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
+        <!-- BODY -->
+        <tr><td style="background:#FFFFFF;padding:44px 40px;">
 
-          <!-- ░░ BODY ░░ -->
-          <tr>
-            <td style="background:#0D1F45;padding:36px 40px;">
+          <p style="font-size:22px;font-weight:700;color:#0F172A;margin:0 0 4px 0;">Hi ${name},</p>
+          <p style="font-size:12px;color:#94A3B8;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;margin:0 0 24px 0;">Confirmation of Receipt</p>
 
-              <p style="font-size:22px;font-weight:800;color:#F1F5F9;margin:0 0 8px 0;">Hi ${name},</p>
-              <p style="font-size:15px;color:#94A3B8;line-height:1.8;margin:0 0 16px 0;">
-                Thank you for getting in touch. I have received your message regarding
-                <span style="color:#60A5FA;font-weight:600;">&ldquo;${subject || 'your enquiry'}&rdquo;</span>
-                and will personally review it shortly.
-              </p>
-              <p style="font-size:15px;color:#94A3B8;line-height:1.8;margin:0 0 28px 0;">
-                You can expect a response within <span style="color:#F1F5F9;font-weight:700;">24&nbsp;hours</span>.
-                In the meantime, feel free to explore my work below.
-              </p>
+          <p style="font-size:15px;color:#334155;line-height:1.85;margin:0 0 16px 0;">
+            Thank you for reaching out. I have received your message regarding
+            <strong style="color:#1D4ED8;">&ldquo;${subject || 'your enquiry'}&rdquo;</strong>
+            and will respond personally.
+          </p>
+          <p style="font-size:15px;color:#334155;line-height:1.85;margin:0 0 32px 0;">
+            You can expect a reply within <strong style="color:#0F172A;">24&nbsp;hours</strong>.
+          </p>
 
-              <!-- Response time badge -->
-              <table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="margin-bottom:32px;">
-                <tr>
-                  <td style="background:#0A1628;border:1px solid rgba(37,99,235,0.35);border-radius:10px;padding:16px 20px;">
-                    <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
-                      <tr>
-                        <td width="50%" style="border-right:1px solid rgba(255,255,255,0.07);padding-right:16px;text-align:center;">
-                          <div style="font-size:10px;color:#475569;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px;">Avg. Response</div>
-                          <div style="font-size:20px;font-weight:900;color:#38BDF8;">24 hrs</div>
-                        </td>
-                        <td width="50%" style="padding-left:16px;text-align:center;">
-                          <div style="font-size:10px;color:#475569;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px;">Based In</div>
-                          <div style="font-size:14px;font-weight:700;color:#F1F5F9;">Lusaka, Zambia</div>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
+          <!-- Stats row -->
+          <table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="margin-bottom:36px;border:1px solid #E2E8F0;border-radius:10px;">
+            <tr>
+              <td width="50%" style="padding:18px 24px;border-right:1px solid #E2E8F0;text-align:center;">
+                <div style="font-size:9px;color:#94A3B8;text-transform:uppercase;letter-spacing:2px;margin-bottom:6px;">Avg. Response</div>
+                <div style="font-size:22px;font-weight:800;color:#1D4ED8;">24 hrs</div>
+              </td>
+              <td width="50%" style="padding:18px 24px;text-align:center;">
+                <div style="font-size:9px;color:#94A3B8;text-transform:uppercase;letter-spacing:2px;margin-bottom:6px;">Based In</div>
+                <div style="font-size:14px;font-weight:700;color:#0F172A;">Lusaka, Zambia</div>
+              </td>
+            </tr>
+          </table>
 
-              <!-- Section label -->
-              <div style="font-size:10px;color:#475569;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;">Connect with me</div>
+          <!-- Connect section -->
+          <table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="margin-bottom:20px;">
+            <tr>
+              <td style="border-top:1px solid #E2E8F0;font-size:1px;line-height:1px;">&nbsp;</td>
+            </tr>
+          </table>
+          <p style="font-size:10px;color:#94A3B8;text-transform:uppercase;letter-spacing:2px;margin:0 0 14px 0;">Connect with me</p>
 
-              <!-- Social buttons -->
-              <table cellpadding="0" cellspacing="0" role="presentation">
-                <tr>
-                  <td style="padding-right:10px;padding-bottom:10px;">
-                    <a href="https://github.com/MK7-SIETE" target="_blank"
-                       style="display:inline-block;padding:11px 18px;background:#161B22;border:1px solid rgba(255,255,255,0.12);border-radius:8px;font-size:12px;font-weight:700;color:#e6edf3;text-decoration:none;white-space:nowrap;">
-                      ${iconGithub} GitHub
-                    </a>
-                  </td>
-                  <td style="padding-right:10px;padding-bottom:10px;">
-                    <a href="https://linkedin.com/in/betsaleel-mukuba" target="_blank"
-                       style="display:inline-block;padding:11px 18px;background:#0A66C2;border:1px solid rgba(255,255,255,0.12);border-radius:8px;font-size:12px;font-weight:700;color:#ffffff;text-decoration:none;white-space:nowrap;">
-                      ${iconLinkedin} LinkedIn
-                    </a>
-                  </td>
-                  <td style="padding-bottom:10px;">
-                    <a href="https://wa.me/260969508654" target="_blank"
-                       style="display:inline-block;padding:11px 18px;background:#128C7E;border:1px solid rgba(255,255,255,0.12);border-radius:8px;font-size:12px;font-weight:700;color:#ffffff;text-decoration:none;white-space:nowrap;">
-                      ${iconWhatsapp} WhatsApp
-                    </a>
-                  </td>
-                </tr>
-              </table>
+          <!-- Social buttons with embedded icons -->
+          <table cellpadding="0" cellspacing="0" role="presentation" style="margin-bottom:36px;">
+            <tr>
+              <td style="padding-right:10px;">
+                <a href="https://github.com/MK7-SIETE" target="_blank"
+                   style="display:inline-block;padding:10px 16px;background:#24292E;border-radius:7px;font-size:12px;font-weight:700;color:#FFFFFF;text-decoration:none;">
+                  <img src="${GITHUB_ICON}" width="13" height="13" alt="GitHub" style="vertical-align:middle;margin-right:6px;margin-top:-2px;"/>GitHub
+                </a>
+              </td>
+              <td style="padding-right:10px;">
+                <a href="https://linkedin.com/in/betsaleel-mukuba" target="_blank"
+                   style="display:inline-block;padding:10px 16px;background:#0A66C2;border-radius:7px;font-size:12px;font-weight:700;color:#FFFFFF;text-decoration:none;">
+                  <img src="${LINKEDIN_ICON}" width="13" height="13" alt="LinkedIn" style="vertical-align:middle;margin-right:6px;margin-top:-2px;"/>LinkedIn
+                </a>
+              </td>
+              <td>
+                <a href="https://wa.me/260969508654" target="_blank"
+                   style="display:inline-block;padding:10px 16px;background:#25D366;border-radius:7px;font-size:12px;font-weight:700;color:#FFFFFF;text-decoration:none;">
+                  <img src="${WHATSAPP_ICON}" width="13" height="13" alt="WhatsApp" style="vertical-align:middle;margin-right:6px;margin-top:-2px;"/>WhatsApp
+                </a>
+              </td>
+            </tr>
+          </table>
 
-              <!-- Divider -->
-              <div style="height:1px;background:linear-gradient(to right,transparent,rgba(37,99,235,0.4),transparent);margin:32px 0;"></div>
+          <!-- Signature -->
+          <table cellpadding="0" cellspacing="0" role="presentation" style="border-top:1px solid #F1F5F9;width:100%;">
+            <tr>
+              <td style="padding-top:28px;">
+                <table cellpadding="0" cellspacing="0" role="presentation">
+                  <tr>
+                    <td style="padding-right:14px;vertical-align:middle;">
+                      <div style="width:46px;height:46px;background:linear-gradient(135deg,#1D4ED8,#0891B2);border-radius:10px;text-align:center;line-height:46px;font-size:20px;font-weight:900;color:#FFFFFF;">B</div>
+                    </td>
+                    <td style="vertical-align:middle;">
+                      <div style="font-size:15px;font-weight:700;color:#0F172A;">Betsaleel Mukuba</div>
+                      <div style="font-size:11px;color:#3B82F6;margin-top:2px;">Software Engineer &nbsp;&middot;&nbsp; Full Stack Developer</div>
+                      <div style="font-size:11px;color:#94A3B8;margin-top:4px;">Lusaka, Zambia &nbsp;&middot;&nbsp; +260 96 950 8654</div>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
 
-              <!-- Signature -->
-              <table cellpadding="0" cellspacing="0" role="presentation">
-                <tr>
-                  <td style="padding-right:16px;vertical-align:middle;">
-                    <div style="width:52px;height:52px;background:linear-gradient(135deg,#1D4ED8,#0891B2);border-radius:12px;text-align:center;line-height:52px;font-size:22px;font-weight:900;color:#ffffff;">B</div>
-                  </td>
-                  <td style="vertical-align:middle;">
-                    <div style="font-size:16px;font-weight:800;color:#F1F5F9;margin-bottom:2px;">Betsaleel Mukuba</div>
-                    <div style="font-size:12px;color:#38BDF8;margin-bottom:5px;">Software Engineer &nbsp;&middot;&nbsp; Full Stack Developer</div>
-                    <div style="font-size:11px;color:#475569;">
-                      ${iconPin} Lusaka, Zambia &nbsp;&nbsp;
-                      ${iconPhone} +260 96 950 8654
-                    </div>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
+        </td></tr>
 
-          <!-- ░░ FOOTER ░░ -->
-          <tr>
-            <td style="background:#060E1F;border-radius:0 0 16px 16px;padding:20px 40px;border-top:1px solid rgba(255,255,255,0.05);text-align:center;">
-              <p style="font-size:11px;color:#1E293B;margin:0 0 6px 0;">
-                &copy; ${new Date().getFullYear()} Betsaleel Mukuba &nbsp;&middot;&nbsp; Lusaka, Zambia
-              </p>
-              <p style="font-size:10px;color:#1E293B;margin:0;">
-                You received this automated reply because you submitted the contact form on my portfolio.<br/>Please do not reply to this email — use the social links above to get in touch.
-              </p>
-            </td>
-          </tr>
+        <!-- FOOTER -->
+        <tr><td style="background:#F8FAFC;border-radius:0 0 12px 12px;padding:18px 40px;border-top:1px solid #E2E8F0;text-align:center;">
+          <p style="font-size:11px;color:#94A3B8;margin:0 0 4px 0;">&copy; ${year} Betsaleel Mukuba &nbsp;&middot;&nbsp; Lusaka, Zambia</p>
+          <p style="font-size:10px;color:#CBD5E1;margin:0;">This is an automated reply. Please do not respond to this email.</p>
+        </td></tr>
 
-        </table>
-      </td>
-    </tr>
+      </table>
+    </td></tr>
   </table>
 </body>
 </html>`;
