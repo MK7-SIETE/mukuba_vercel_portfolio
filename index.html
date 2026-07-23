@@ -1,779 +1,374 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
-  <meta name="description" content="Betsaleel Mukuba — Software Engineer & Full Stack Developer based in Lusaka, Zambia."/>
-  <meta name="author" content="Betsaleel Mukuba"/>
-  <link rel="icon" type="image/x-icon" href="./assets/favicon.ico"/>
-  <link rel="icon" type="image/png" href="./assets/favicon.png"/>
-  <title>Betsaleel Mukuba — Software Engineer & Full Stack Developer</title>
-  <link rel="stylesheet" href="css/style.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Betsaleel Mukuba — Software Engineer &amp; Full Stack Developer based in Lusaka, Zambia."/>
+<meta name="author" content="Betsaleel Mukuba"/>
+<link rel="icon" type="image/x-icon" href="./assets/favicon.ico"/>
+<link rel="icon" type="image/png" href="./assets/favicon.png"/>
+<title>Betsaleel Mukuba Developer</title>
+<link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 
-<div id="scroll-progress"></div>
+<!-- ============ DESKTOP RAIL ============ -->
+<aside class="site-rail">
+  <a href="#hero" class="rail-mark">
+    <svg class="rail-mark-glyph" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="6" cy="6" r="2.4" stroke="#14181A" stroke-width="1.4"/>
+      <circle cx="20" cy="20" r="2.4" fill="#0E6B52"/>
+      <path d="M8 7 L13 13 M13 13 L18 18 M13 13 L13 20" stroke="#14181A" stroke-width="1.4" stroke-linecap="round"/>
+    </svg>
+    <span class="rail-mark-text">Betsaleel<span>.</span></span>
+  </a>
 
-<!-- PRELOADER -->
-<div id="preloader">
-  <div class="preloader-logo">BM<span>.</span></div>
-  <div class="preloader-bar"><div class="preloader-fill"></div></div>
-</div>
-
-<!-- NAVBAR -->
-<nav id="navbar">
-  <a href="#hero" class="nav-brand">Betsaleel<span>.</span></a>
-  <ul class="nav-links">
-    <li><a href="#hero" class="active">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#blog">Blog</a></li>
-    <li><a href="#contact">Contact</a></li>
+  <ul class="rail-nav" id="rail-nav">
+    <li><a href="#hero" data-nav="hero" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>Home</a></li>
+    <li><a href="#about" data-nav="about"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg>About</a></li>
+    <li><a href="#services" data-nav="services"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Services</a></li>
+    <li><a href="#projects" data-nav="projects"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/></svg>Projects</a></li>
+    <li><a href="#contact" data-nav="contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 6 10-6"/></svg>Contact</a></li>
   </ul>
-  <div class="nav-actions">
-    <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle theme"><i class="fas fa-sun"></i></button>
-    <a href="#contact" class="btn-hire">Hire Me</a>
-    <div class="hamburger" role="button" tabindex="0" aria-label="Menu"><span></span><span></span><span></span></div>
-  </div>
-</nav>
 
-<!-- MOBILE MENU -->
-<div id="mobile-menu">
-  <a href="#hero" class="active">Home</a>
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
-  <a href="#blog">Blog</a>
-  <a href="#contact">Contact</a>
-  <a href="#contact" class="btn-hire-mob">Hire Me</a>
+  <div class="rail-foot">
+    <div class="rail-status"><span class="rail-status-dot"></span>Available for opportunities</div>
+    <div class="rail-socials">
+      <a href="https://github.com/MK7-SIETE" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="-3.5 -3.5 31 31" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.97-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 015.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.41.36.78 1.06.78 2.15 0 1.55-.01 2.8-.01 3.18 0 .3.2.66.79.55A10.52 10.52 0 0023.5 12c0-6.27-5.23-11.5-11.5-11.5z"/></svg></a>
+      <a href="https://linkedin.com/in/betsaleel-mukuba" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67h-3.56V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.07 2.07 0 11.02-4.14 2.07 2.07 0 01-.02 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+      <a href="https://wa.me/260777387056" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A8.5 8.5 0 0012 4a8.38 8.38 0 00-7.15 12.7L4 20l3.4-.9A8.4 8.4 0 0012 20.4a8.5 8.5 0 006-14.08zm-5.6 12.9a7 7 0 01-3.58-.98l-.26-.15-2.67.7.71-2.6-.17-.27A7 7 0 1119.4 12 7 7 0 0112 19.22zm3.86-5.24c-.21-.1-1.24-.61-1.43-.68-.19-.07-.33-.1-.47.1-.14.21-.54.68-.66.82-.12.14-.24.16-.45.05a5.7 5.7 0 01-1.68-1.04 6.3 6.3 0 01-1.16-1.44c-.12-.21 0-.32.09-.43.09-.1.21-.24.31-.36.1-.12.14-.21.21-.35.07-.14.03-.26-.02-.36-.05-.1-.47-1.13-.65-1.55-.17-.4-.34-.35-.47-.35h-.4c-.14 0-.36.05-.55.26-.19.21-.72.71-.72 1.72 0 1.02.74 2 .84 2.14.1.14 1.45 2.21 3.51 3.1.49.21.87.34 1.17.43.49.16.94.13 1.29.08.39-.06 1.24-.5 1.42-.99.17-.48.17-.9.12-.99-.05-.09-.19-.14-.4-.24z"/></svg></a>
+    </div>
+  </div>
+</aside>
+
+<!-- ============ MOBILE TOPBAR ============ -->
+<header class="mobile-topbar">
+  <a href="#hero" class="rail-mark">
+    <svg class="rail-mark-glyph" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="6" cy="6" r="2.4" stroke="#14181A" stroke-width="1.4"/>
+      <circle cx="20" cy="20" r="2.4" fill="#0E6B52"/>
+      <path d="M8 7 L13 13 M13 13 L18 18 M13 13 L13 20" stroke="#14181A" stroke-width="1.4" stroke-linecap="round"/>
+    </svg>
+    <span class="rail-mark-text">Betsaleel<span>.</span></span>
+  </a>
+  <button class="hamburger" id="mobile-open" aria-label="Open menu"><span></span></button>
+</header>
+
+<div class="mobile-nav" id="mobile-nav">
+  <div class="mobile-nav-top">
+    <span class="rail-mark-text">Menu</span>
+    <button class="mobile-nav-close" id="mobile-close" aria-label="Close menu">✕</button>
+  </div>
+  <ul>
+    <li><a href="#hero"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>Home</a></li>
+    <li><a href="#about"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg>About</a></li>
+    <li><a href="#services"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Services</a></li>
+    <li><a href="#projects"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/></svg>Projects</a></li>
+    <li><a href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 6 10-6"/></svg>Contact</a></li>
+  </ul>
+  <div class="mobile-nav-foot">
+   <div class="rail-socials">
+      <a href="https://github.com/MK7-SIETE" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="-3.5 -3.5 31 31" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.97-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 015.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.41.36.78 1.06.78 2.15 0 1.55-.01 2.8-.01 3.18 0 .3.2.66.79.55A10.52 10.52 0 0023.5 12c0-6.27-5.23-11.5-11.5-11.5z"/></svg></a>
+      <a href="https://linkedin.com/in/betsaleel-mukuba" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67h-3.56V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.07 2.07 0 11.02-4.14 2.07 2.07 0 01-.02 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+      <a href="https://wa.me/260777387056" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A8.5 8.5 0 0012 4a8.38 8.38 0 00-7.15 12.7L4 20l3.4-.9A8.4 8.4 0 0012 20.4a8.5 8.5 0 006-14.08zm-5.6 12.9a7 7 0 01-3.58-.98l-.26-.15-2.67.7.71-2.6-.17-.27A7 7 0 1119.4 12 7 7 0 0112 19.22zm3.86-5.24c-.21-.1-1.24-.61-1.43-.68-.19-.07-.33-.1-.47.1-.14.21-.54.68-.66.82-.12.14-.24.16-.45.05a5.7 5.7 0 01-1.68-1.04 6.3 6.3 0 01-1.16-1.44c-.12-.21 0-.32.09-.43.09-.1.21-.24.31-.36.1-.12.14-.21.21-.35.07-.14.03-.26-.02-.36-.05-.1-.47-1.13-.65-1.55-.17-.4-.34-.35-.47-.35h-.4c-.14 0-.36.05-.55.26-.19.21-.72.71-.72 1.72 0 1.02.74 2 .84 2.14.1.14 1.45 2.21 3.51 3.1.49.21.87.34 1.17.43.49.16.94.13 1.29.08.39-.06 1.24-.5 1.42-.99.17-.48.17-.9.12-.99-.05-.09-.19-.14-.4-.24z"/></svg></a>
+    </div>
+  </div>
 </div>
 
-<!-- ═══ HERO ═══════════════════════════════════════════════ -->
-<section id="hero">
-  <canvas id="hero-canvas"></canvas>
-  <div class="hero-grid-overlay"></div>
-  <div class="hero-glow"></div>
-  <div class="hero-inner">
-    <div class="hero-text">
-      <div class="hero-badge"><span class="hero-badge-dot"></span>Available for opportunities</div>
-      <h1 class="hero-name"><span id="hero-name-text">Betsaleel Mukuba</span></h1>
-      <div class="hero-typed-wrapper"><span id="typed-text"></span><span class="typed-cursor"></span></div>
-      <p class="hero-desc" id="hero-desc">Building modern, scalable web applications with a passion for clean code and exceptional user experiences.</p>
-      <div class="hero-buttons">
-        <button class="btn-primary cv-download-btn"><i class="fas fa-download"></i> Download CV</button>
-        <a href="#projects" class="btn-outline"><i class="fas fa-folder-open"></i> View Projects</a>
-      </div>
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <div class="hero-stat-num"><span id="hero-stat-years" data-count="2" data-suffix="">0</span></div>
-          <div class="hero-stat-label">Years Exp.</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-num"><span id="hero-stat-projects" data-count="4" data-suffix="">0</span><span>+</span></div>
-          <div class="hero-stat-label">Projects</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-num">10<span>+</span></div>
-          <div class="hero-stat-label">Technologies</div>
-        </div>
-      </div>
-    </div>
-    <div class="hero-photo-col">
-      <div class="hero-photo-frame"><img id="hero-profile-img" src="./assets/mwa.png" alt="Betsaleel Mukuba"/></div>
-      <div class="hero-social-links">
-        <a href="https://github.com/MK7-SIETE" target="_blank" rel="noopener" class="social-icon-btn social-github" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/betsaleel-mukuba" target="_blank" rel="noopener" class="social-icon-btn social-linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://facebook.com/betsa.mukuba" target="_blank" rel="noopener" class="social-icon-btn social-facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://wa.me/260969508654" target="_blank" rel="noopener" class="social-icon-btn social-whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-      </div>
-    </div>
-  </div>
-  <div class="scroll-hint"><div class="scroll-mouse"><div class="scroll-mouse-dot"></div></div><span>Scroll</span></div>
-</section>
+<!-- ============ MAIN ============ -->
+<main class="site-main">
 
-<!-- ═══ ABOUT ════════════════════════════════════════════== -->
-<section id="about">
-  <div class="section-label reveal">Get to Know Me</div>
-  <h2 class="section-title reveal">About <span>Me</span></h2>
-  <div class="divider reveal"></div>
-  <div class="about-grid">
-    <div class="about-img-col reveal-left">
-      <div class="about-img-wrap">
-        <img id="about-pic" src="./assets/about-pic.png" alt="Betsaleel Mukuba"/>
-        <div class="about-card-float">
-          <div class="about-mini-stat"><div class="about-mini-stat-num">2<span>+</span></div><div class="about-mini-stat-label">Years Experience</div></div>
-          <div class="about-mini-stat"><div class="about-mini-stat-num">6<span>+</span></div><div class="about-mini-stat-label">Projects Built</div></div>
-          <div class="about-mini-stat"><div class="about-mini-stat-num">10<span>+</span></div><div class="about-mini-stat-label">Technologies</div></div>
-          <div class="about-mini-stat"><div class="about-mini-stat-num">∞</div><div class="about-mini-stat-label">Cups of Coffee</div></div>
+  <!-- HERO -->
+  <section class="section hero" id="hero">
+    <div class="col-wide hero-grid" style="margin:0 auto;">
+      <div class="hero-copy">
+        <div class="eyebrow">Software Engineer Lusaka, Zambia</div>
+        <h1 class="hero-name">Betsaleel Mukuba</h1>
+        <div class="hero-role mono">Full‑Stack Developer</div>
+        <p class="hero-desc">I build clean, dependable web applications, from database schema to polished interface with a focus on maintainable code and real usability.</p>
+        <div class="hero-actions">
+          <a href="./assets/Betsaleel_Mukuba_CV.pdf" download class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
+            Download CV
+          </a>
+          <a href="#projects" class="btn btn-outline">
+            View Projects
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+        <div class="spec-panel">
+          <div class="spec-row"><span class="spec-key">ROLE</span><span class="spec-val">Software Engineer, Full Stack</span></div>
+          <div class="spec-row"><span class="spec-key">BASED</span><span class="spec-val">Lusaka, Zambia</span></div>
+          <div class="spec-row"><span class="spec-key">EXPERIENCE</span><span class="spec-val">2+ years</span></div>
+          <div class="spec-row"><span class="spec-key">STATUS</span><span class="spec-val">Available</span></div>
+        </div>
+      </div>
+      <div class="hero-photo-wrap"><div class="hero-photo"><img src="./assets/mwa.png" alt="Betsaleel Mukuba"/></div></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="col-wide about-grid" style="margin:0 auto;">
+      <div class="about-text">
+        <div class="eyebrow reveal">Get to Know Me</div>
+        <h2 class="section-heading reveal">About <em>Me</em></h2>
+        <p class="reveal">I'm a Software Engineer and Full Stack Developer with a solid foundation in Computer Science. I specialise in building web applications that combine clean, intuitive interfaces with dependable, well-structured code underneath.</p>
+        <p class="reveal">I care about clean code, scalable architecture and continuous learning — turning complex requirements into practical, user-friendly solutions.</p>
+        <div class="about-chips reveal">
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.5 2.5 3 6 3s6-1.5 6-3v-5"/></svg>Certified Software Engineer</span>
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8"/></svg>Certified Computer Scientist</span>
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Clean Code Advocate</span>
+        </div>
+      </div>
+      <div class="about-panel reveal">
+        <div class="about-panel-head">Profile / Stats</div>
+        <div class="about-stats">
+          <div class="about-stat"><div class="about-stat-num"><span class="count" data-count="2">0</span><span>+</span></div><div class="about-stat-label">Years Experience</div></div>
+          <div class="about-stat"><div class="about-stat-num"><span class="count" data-count="4">0</span><span>+</span></div><div class="about-stat-label">Projects Built</div></div>
+          <div class="about-stat"><div class="about-stat-num"><span class="count" data-count="10">0</span><span>+</span></div><div class="about-stat-label">Technologies</div></div>
+          <div class="about-stat"><div class="about-stat-num">∞</div><div class="about-stat-label">Cups of Coffee</div></div>
         </div>
       </div>
     </div>
-    <div class="about-content reveal-right">
-      <p class="about-text" id="about-bio-1">I'm a passionate Software Engineer and Full Stack Developer with expertise in building modern, responsive web applications. With a solid foundation in Computer Science, I specialize in crafting intuitive user interfaces that combine elegant design with functional excellence.</p>
-      <p class="about-text" id="about-bio-2">Driven by clean code, scalable architecture, and continuous learning — I transform complex requirements into elegant, user-friendly solutions that make a real impact.</p>
-      <div class="about-values stagger">
-        <div class="value-chip"><i class="fas fa-graduation-cap"></i>Certified Software Engineer</div>
-        <div class="value-chip"><i class="fas fa-laptop-code"></i>Certified Computer Scientist</div>
-        <div class="value-chip"><i class="fas fa-map-marker-alt"></i><span id="hero-location-text">Lusaka, Zambia</span></div>
-        <div class="value-chip"><i class="fas fa-clock"></i>Available &amp; Open to Work</div>
-        <div class="value-chip"><i class="fas fa-shield-alt"></i>Clean Code Advocate</div>
-        <div class="value-chip"><i class="fas fa-lightbulb"></i>Continuous Learner</div>
-      </div>
-      <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:0.5rem">
-        <button class="btn-primary cv-download-btn"><i class="fas fa-download"></i> Download CV</button>
-        <a href="#contact" class="btn-outline"><i class="fas fa-paper-plane"></i> Get in Touch</a>
-      </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="col" style="margin:0 auto;">
+      <div class="eyebrow reveal">What I Offer</div>
+      <h2 class="section-heading reveal">My <em>Services</em></h2>
+      <p class="section-lede reveal">Practical, production-ready work across the stack — pick a starting point below.</p>
     </div>
-  </div>
-</section>
+    <div class="col" style="margin:0 auto;">
 
-<!-- ═══ SERVICES ═════════════════════════════════════════== -->
-<section id="services">
-  <div class="section-label reveal">What I Offer</div>
-  <h2 class="section-title reveal">My <span>Services</span></h2>
-  <div class="divider reveal"></div>
-  <p class="section-sub reveal">Professional services tailored to bring your digital vision to life. Click any card to learn more.</p>
-  <div class="services-grid stagger">
-
-    <div class="service-card" data-popup="frontend">
-      <div class="service-icon"><i class="fas fa-desktop"></i></div>
-      <h3 class="service-title">Frontend Development</h3>
-      <p class="service-desc">Building pixel-perfect, responsive UIs with modern frameworks. Every component crafted for performance, accessibility, and stunning visuals.</p>
-      <div class="service-tags"><span class="service-tag">HTML5</span><span class="service-tag">CSS3</span><span class="service-tag">JavaScript</span><span class="service-tag">React</span></div>
-      <div class="card-click-hint"><i class="fas fa-info-circle"></i> Click to learn more</div>
-    </div>
-
-    <div class="service-card" data-popup="backend">
-      <div class="service-icon"><i class="fas fa-server"></i></div>
-      <h3 class="service-title">Backend Development</h3>
-      <p class="service-desc">Robust server-side solutions with secure APIs, efficient database design, and scalable architecture built for production workloads.</p>
-      <div class="service-tags"><span class="service-tag">PHP</span><span class="service-tag">Laravel</span><span class="service-tag">MySQL</span><span class="service-tag">REST API</span></div>
-      <div class="card-click-hint"><i class="fas fa-info-circle"></i> Click to learn more</div>
-    </div>
-
-    <div class="service-card" data-popup="fullstack">
-      <div class="service-icon"><i class="fas fa-layer-group"></i></div>
-      <h3 class="service-title">Full Stack Solutions</h3>
-      <p class="service-desc">End-to-end web applications — from database schema to polished UI. Complete solutions delivered with quality and precision.</p>
-      <div class="service-tags"><span class="service-tag">Next.js</span><span class="service-tag">Node.js</span><span class="service-tag">MongoDB</span><span class="service-tag">PostgreSQL</span></div>
-      <div class="card-click-hint"><i class="fas fa-info-circle"></i> Click to learn more</div>
-    </div>
-
-    <div class="service-card" data-popup="data">
-      <div class="service-icon"><i class="fas fa-database"></i></div>
-      <h3 class="service-title">Database &amp; Data Analysis</h3>
-      <p class="service-desc">Designing efficient database schemas, writing optimised queries, and extracting meaningful insights from data using SQL and Excel.</p>
-      <div class="service-tags"><span class="service-tag">MySQL</span><span class="service-tag">Data Analysis</span><span class="service-tag">Excel</span><span class="service-tag">Reporting</span></div>
-      <div class="card-click-hint"><i class="fas fa-info-circle"></i> Click to learn more</div>
-    </div>
-
-    <div class="service-card" data-popup="responsive">
-      <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
-      <h3 class="service-title">Responsive Design</h3>
-      <p class="service-desc">Mobile-first designs that look flawless on every screen size — from 260px feature phones to widescreen displays.</p>
-      <div class="service-tags"><span class="service-tag">Mobile-First</span><span class="service-tag">CSS Grid</span><span class="service-tag">Flexbox</span><span class="service-tag">UX/UI</span></div>
-      <div class="card-click-hint"><i class="fas fa-info-circle"></i> Click to learn more</div>
-    </div>
-
-    <div class="service-card" data-popup="software">
-      <div class="service-icon"><i class="fas fa-code"></i></div>
-      <h3 class="service-title">Software Engineering</h3>
-      <p class="service-desc">Applying CS fundamentals: algorithms, data structures, system design, and software architecture for maintainable, scalable codebases.</p>
-      <div class="service-tags"><span class="service-tag">Python</span><span class="service-tag">C</span><span class="service-tag">Algorithms</span><span class="service-tag">Architecture</span></div>
-      <div class="card-click-hint"><i class="fas fa-info-circle"></i> Click to learn more</div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ═══ SKILLS ════════════════════════════════════════════= -->
-<section id="skills">
-  <div class="section-label reveal">Technical Expertise</div>
-  <h2 class="section-title reveal">Skills &amp; <span>Technologies</span></h2>
-  <div class="divider reveal"></div>
-  <p class="section-sub reveal">Click any skill for details about how I use it.</p>
-
-  <!-- Skill Category Cards -->
-  <div class="skill-categories stagger">
-
-    <div class="skill-cat-card">
-      <div class="skill-cat-header">
-        <div class="skill-cat-icon"><i class="fas fa-desktop"></i></div>
-        <h3 class="skill-cat-title">Frontend</h3>
-      </div>
-      <div class="skills-chips">
-        <span class="skill-chip" data-skill="HTML5 / CSS3"><i class="fab fa-html5"></i>HTML5</span>
-        <span class="skill-chip" data-skill="HTML5 / CSS3"><i class="fab fa-css3-alt"></i>CSS3</span>
-        <span class="skill-chip" data-skill="JavaScript"><i class="fab fa-js"></i>JavaScript</span>
-
-        <span class="skill-chip" data-skill="React / Next.js"><i class="fas fa-layer-group"></i>Next.js</span>
-        <span class="skill-chip" data-skill="HTML5 / CSS3"><i class="fas fa-mobile-alt"></i>Responsive</span>
-        <span class="skill-chip" data-skill="HTML5 / CSS3"><i class="fas fa-wind"></i>Tailwind CSS</span>
-      </div>
-    </div>
-
-    <div class="skill-cat-card">
-      <div class="skill-cat-header">
-        <div class="skill-cat-icon"><i class="fas fa-server"></i></div>
-        <h3 class="skill-cat-title">Backend</h3>
-      </div>
-      <div class="skills-chips">
-        <span class="skill-chip" data-skill="PHP / Laravel"><i class="fab fa-php"></i>PHP</span>
-        <span class="skill-chip" data-skill="PHP / Laravel"><i class="fas fa-leaf"></i>Laravel</span>
-        <span class="skill-chip" data-skill="JavaScript"><i class="fab fa-node-js"></i>Node.js</span>
-        <span class="skill-chip" data-skill="PHP / Laravel"><i class="fas fa-server"></i>REST API</span>
-        <span class="skill-chip" data-skill="PHP / Laravel"><i class="fas fa-shield-alt"></i>JWT Auth</span>
-        <span class="skill-chip" data-skill="JavaScript"><i class="fas fa-envelope"></i>Nodemailer</span>
-      </div>
-    </div>
-
-    <div class="skill-cat-card">
-      <div class="skill-cat-header">
-        <div class="skill-cat-icon"><i class="fas fa-database"></i></div>
-        <h3 class="skill-cat-title">Database &amp; Data</h3>
-      </div>
-      <div class="skills-chips">
-        <span class="skill-chip" data-skill="MySQL / Database"><i class="fas fa-database"></i>MySQL</span>
-        <span class="skill-chip" data-skill="MySQL / Database"><i class="fas fa-table"></i>Data Analysis</span>
-        <span class="skill-chip" data-skill="MySQL / Database"><i class="fas fa-file-excel"></i>MS Excel</span>
-        <span class="skill-chip" data-skill="MySQL / Database"><i class="fas fa-chart-bar"></i>Pivot Tables</span>
-        <span class="skill-chip" data-skill="MySQL / Database"><i class="fas fa-search"></i>SQL Queries</span>
-      </div>
-    </div>
-
-    <div class="skill-cat-card">
-      <div class="skill-cat-header">
-        <div class="skill-cat-icon"><i class="fas fa-code"></i></div>
-        <h3 class="skill-cat-title">Languages</h3>
-      </div>
-      <div class="skills-chips">
-      
-        <span class="skill-chip" data-skill="C Programming"><i class="fas fa-code"></i>C</span>
-        <span class="skill-chip" data-skill="JavaScript"><i class="fab fa-js"></i>JavaScript</span>
-        <span class="skill-chip" data-skill="PHP / Laravel"><i class="fab fa-php"></i>PHP</span>
-      </div>
-    </div>
-
-    <div class="skill-cat-card">
-      <div class="skill-cat-header">
-        <div class="skill-cat-icon"><i class="fas fa-tools"></i></div>
-        <h3 class="skill-cat-title">Tools &amp; DevOps</h3>
-      </div>
-      <div class="skills-chips">
-        <span class="skill-chip"><i class="fab fa-git-alt"></i>Git</span>
-        <span class="skill-chip"><i class="fab fa-github"></i>GitHub</span>
-        <span class="skill-chip"><i class="fas fa-terminal"></i>VS Code</span>
-        <span class="skill-chip"><i class="fas fa-cloud-upload-alt"></i>Vercel</span>
-        <span class="skill-chip"><i class="fas fa-train"></i>Railway</span>
-        <span class="skill-chip"><i class="fas fa-cog"></i>Composer</span>
-      </div>
-    </div>
-
-    <div class="skill-cat-card">
-      <div class="skill-cat-header">
-        <div class="skill-cat-icon"><i class="fas fa-briefcase"></i></div>
-        <h3 class="skill-cat-title">Office Suite</h3>
-      </div>
-      <div class="skills-chips">
-        <span class="skill-chip"><i class="fas fa-file-word"></i>MS Word</span>
-        <span class="skill-chip"><i class="fas fa-file-excel"></i>MS Excel</span>
-        <span class="skill-chip"><i class="fas fa-file-powerpoint"></i>PowerPoint</span>
-        <span class="skill-chip"><i class="fas fa-file-alt"></i>Documentation</span>
-        <span class="skill-chip"><i class="fas fa-chart-pie"></i>Reporting</span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ═══ PROJECTS ══════════════════════════════════════════= -->
-<section id="projects">
-  <div class="section-label reveal">Portfolio</div>
-  <h2 class="section-title reveal">Featured <span>Projects</span></h2>
-  <div class="divider reveal"></div>
-  <p class="section-sub reveal">Click any project card for full details, tech stack, and GitHub link.</p>
-  <div class="projects-filter stagger">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="web">Web Dev</button>
-    <button class="filter-btn" data-filter="fullstack">Full Stack</button>
-    <button class="filter-btn" data-filter="backend">Backend</button>
-    <button class="filter-btn" data-filter="systems">Systems</button>
-  </div>
-  <div class="projects-grid stagger">
-
-    <div class="project-card" data-cat="web fullstack" data-popup="portfolio">
-      <div class="project-thumb">
-        <i class="fas fa-globe project-thumb-icon"></i>
-        <div class="project-thumb-overlay">
-          <a href="https://github.com/MK7-SIETE" target="_blank" rel="noopener" class="project-link-btn" title="GitHub" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>
+      <div class="service-row reveal">
+        <h3 class="service-title">Frontend Development</h3>
+        <p class="service-desc">Pixel-perfect, responsive interfaces built with modern tooling — every component crafted for performance, accessibility and clarity.</p>
+        <div class="service-stack">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>JavaScript</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>React</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20"/></svg>Responsive Design</span>
         </div>
-        <span class="project-status status-done"><i class="fas fa-check-circle"></i> Completed</span>
       </div>
-      <div class="project-body">
-        <h3 class="project-name">Professional Portfolio Website</h3>
-        <p class="project-desc">Modern responsive portfolio with particle animation, admin panel, EmailJS contact form, and full responsiveness to 260px.</p>
-        <div class="project-tech"><span class="tech-pill">HTML5</span><span class="tech-pill">CSS3</span><span class="tech-pill">JavaScript</span><span class="tech-pill">EmailJS</span></div>
-        <div class="card-click-hint"><i class="fas fa-mouse-pointer"></i> Click for full details</div>
-      </div>
-    </div>
 
-    <div class="project-card" data-cat="systems backend" data-popup="banking">
-      <div class="project-thumb">
-        <i class="fas fa-university project-thumb-icon"></i>
-        <div class="project-thumb-overlay">
-          <a href="https://github.com/MK7-SIETE" target="_blank" rel="noopener" class="project-link-btn" title="GitHub" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>
+      <div class="service-row reveal">
+        <h3 class="service-title">Backend Development</h3>
+        <p class="service-desc">Secure APIs, efficient database design and server-side logic built to hold up under real production workloads.</p>
+        <div class="service-stack">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>PHP</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Laravel</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>MySQL</span>
         </div>
-        <span class="project-status status-progress"><i class="fas fa-spinner"></i> In Progress</span>
       </div>
-      <div class="project-body">
-        <h3 class="project-name">Mobile Banking System</h3>
-        <p class="project-desc">CLI banking app in C with account management, fund transfers, and secure file-based authentication.</p>
-        <div class="project-tech"><span class="tech-pill">C Programming</span><span class="tech-pill">File I/O</span><span class="tech-pill">Algorithms</span></div>
-        <div class="card-click-hint"><i class="fas fa-mouse-pointer"></i> Click for full details</div>
-      </div>
-    </div>
 
-    <div class="project-card" data-cat="web fullstack" data-popup="ecommerce">
-      <div class="project-thumb">
-        <i class="fas fa-shopping-bag project-thumb-icon"></i>
-        <div class="project-thumb-overlay">
-          <a href="https://github.com/MK7-SIETE" target="_blank" rel="noopener" class="project-link-btn" title="GitHub" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>
+      <div class="service-row reveal">
+        <h3 class="service-title">Full Stack Solutions</h3>
+        <p class="service-desc">End-to-end applications — from database schema to polished UI — delivered as one coherent, well-tested product.</p>
+        <div class="service-stack">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Next.js</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Node.js</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>MongoDB</span>
         </div>
-        <span class="project-status status-progress"><i class="fas fa-spinner"></i> In Progress</span>
       </div>
-      <div class="project-body">
-        <h3 class="project-name">E-commerce Platform</h3>
-        <p class="project-desc">Full-stack e-commerce with product catalogue, cart, Stripe payments, and admin dashboard.</p>
-        <div class="project-tech"><span class="tech-pill">Next.js</span><span class="tech-pill">React</span><span class="tech-pill">MongoDB</span><span class="tech-pill">Stripe</span></div>
-        <div class="card-click-hint"><i class="fas fa-mouse-pointer"></i> Click for full details</div>
-      </div>
-    </div>
 
-    <div class="project-card" data-cat="fullstack backend" data-popup="school">
-      <div class="project-thumb">
-        <i class="fas fa-school project-thumb-icon"></i>
-        <div class="project-thumb-overlay">
-          <a href="https://github.com/MK7-SIETE" target="_blank" rel="noopener" class="project-link-btn" title="GitHub" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>
+      <div class="service-row reveal">
+        <h3 class="service-title">Database &amp; Data Analysis</h3>
+        <p class="service-desc">Efficient schema design, optimised queries, and clear reporting that turns raw data into decisions.</p>
+        <div class="service-stack">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>MySQL</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-6 4 3 5-8"/></svg>Data Analysis</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-6 4 3 5-8"/></svg>Excel</span>
         </div>
-        <span class="project-status status-progress"><i class="fas fa-spinner"></i> In Progress</span>
       </div>
-      <div class="project-body">
-        <h3 class="project-name">School Management System</h3>
-        <p class="project-desc">Full school admin platform — student records, attendance, grades, and parent-teacher communication.</p>
-        <div class="project-tech"><span class="tech-pill">Next.js</span><span class="tech-pill">React</span><span class="tech-pill">PostgreSQL</span><span class="tech-pill">REST API</span></div>
-        <div class="card-click-hint"><i class="fas fa-mouse-pointer"></i> Click for full details</div>
+
+      <div class="service-row reveal">
+        <h3 class="service-title">Responsive Design</h3>
+        <p class="service-desc">Mobile-first layouts that hold up cleanly on any screen — from small phones to widescreen displays.</p>
+        <div class="service-stack">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>Mobile-First</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>CSS Grid</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg>UX/UI</span>
+        </div>
       </div>
+
+      <div class="service-row reveal">
+        <h3 class="service-title">Software Engineering</h3>
+        <p class="service-desc">Solid CS fundamentals — algorithms, data structures and system design — applied to keep codebases maintainable as they grow.</p>
+        <div class="service-stack">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Python</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>C</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/><path d="M4 10h2M4 14h2M18 10h2M18 14h2M10 4v2M14 4v2M10 18v2M14 18v2"/></svg>Algorithms</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="col-wide" style="margin:0 auto;">
+      <div class="eyebrow reveal">Portfolio</div>
+      <h2 class="section-heading reveal">Featured <em>Projects</em></h2>
+      <p class="section-lede reveal">A selection of what I've been building.</p>
     </div>
 
+    <div class="col-wide" style="margin:0 auto;">
 
-    
+      <div class="project-row reveal">
+        <div class="project-media"><img src="https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?auto=format&fit=crop&w=1000&q=80" alt="Website displayed on a monitor" loading="lazy"/></div>
+        <div>
+          <div class="project-meta"><span>Web · Full Stack</span></div>
+          <h3 class="project-name">Professional Portfolio Website</h3>
+          <p class="project-desc">This site — a fully static, responsive personal portfolio with a custom design system, built without any framework.</p>
+          <div class="project-stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Vercel</span></div>
+          <a href="https://your-demo-link-here.com" target="_blank" rel="noopener" class="project-link">View
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+          </a>
+        </div>
+      </div>
 
-  </div>
-</section>
+      <div class="project-row reveal">
+        <div class="project-media"><img src="https://images.unsplash.com/photo-1616077168712-fc6c788db4af?auto=format&fit=crop&w=1000&q=80" alt="Person holding a smartphone" loading="lazy"/></div>
+        <div>
+          <div class="project-meta"><span>Systems · Backend</span></div>
+          <h3 class="project-name">Mobile Banking System</h3>
+          <p class="project-desc">A CLI banking application written in C, handling account management, fund transfers and secure file-based authentication.</p>
+          <div class="project-stack"><span>C Programming</span><span>File I/O</span><span>Algorithms</span></div>
+          <a href="https://your-demo-link-here.com" target="_blank" rel="noopener" class="project-link">View
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+          </a>
+        </div>
+      </div>
 
-<!-- ═══ BLOG ══════════════════════════════════════════════= -->
-<section id="blog">
-  <div class="section-label reveal">Insights &amp; Writing</div>
-  <h2 class="section-title reveal">Latest <span>Articles</span></h2>
-  <div class="divider reveal"></div>
-  <p class="section-sub reveal">Thoughts on software development and the craft of building things. Click any article to read a preview or visit the full post.</p>
-  <div class="blog-grid stagger">
+      <div class="project-row reveal">
+        <div class="project-media"><img src="https://images.unsplash.com/photo-1586880244406-556ebe35f282?auto=format&fit=crop&w=1000&q=80" alt="Laptop used for online shopping" loading="lazy"/></div>
+        <div>
+          <div class="project-meta"><span>Web · Full Stack</span></div>
+          <h3 class="project-name">E-commerce Platform</h3>
+          <p class="project-desc">A full-stack storefront with a product catalogue, shopping cart, secure Stripe checkout and an admin dashboard for inventory and orders.</p>
+          <div class="project-stack"><span>Next.js</span><span>React</span><span>MongoDB</span><span>Stripe</span></div>
+          <a href="https://your-demo-link-here.com" target="_blank" rel="noopener" class="project-link">View
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+          </a>
+        </div>
+      </div>
 
-    <article class="blog-card" data-blog-idx="0">
-      <div class="blog-thumb"><i class="fas fa-code blog-thumb-icon"></i><span class="blog-category">Web Dev</span></div>
-      <div class="blog-body">
-        <div class="blog-meta"><span><i class="far fa-calendar"></i>Jan 2026</span><span><i class="far fa-clock"></i>5 min</span></div>
-        <h3 class="blog-title">Building Responsive Layouts That Work on Every Device</h3>
-        <p class="blog-excerpt">CSS Grid and Flexbox strategies that ensure your layouts look professional from 260px phones to widescreen monitors.</p>
-        <span class="blog-read-more">Read Article <i class="fas fa-arrow-right"></i></span>
+      <div class="project-row reveal">
+        <div class="project-media"><img src="https://images.unsplash.com/photo-1643199187247-b3b6009bf0bb?auto=format&fit=crop&w=1000&q=80" alt="Row of computer monitors in a lab" loading="lazy"/></div>
+        <div>
+          <div class="project-meta"><span>Full Stack · Backend</span></div>
+          <h3 class="project-name">School Management System</h3>
+          <p class="project-desc">A school administration platform covering student records, attendance, grading and parent–teacher communication.</p>
+          <div class="project-stack"><span>Next.js</span><span>React</span><span>PostgreSQL</span><span>REST API</span></div>
+          <a href="https://your-demo-link-here.com" target="_blank" rel="noopener" class="project-link">View
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+          </a>
+        </div>
       </div>
-    </article>
 
-    <article class="blog-card" data-blog-idx="1">
-      <div class="blog-thumb"><i class="fas fa-database blog-thumb-icon"></i><span class="blog-category">Backend</span></div>
-      <div class="blog-body">
-        <div class="blog-meta"><span><i class="far fa-calendar"></i>Dec 2025</span><span><i class="far fa-clock"></i>7 min</span></div>
-        <h3 class="blog-title">MySQL Performance: Writing Queries That Don't Kill Your Server</h3>
-        <p class="blog-excerpt">Deep dive into SQL query optimisation — indexes, execution plans, joins, and common anti-patterns to avoid.</p>
-        <span class="blog-read-more">Read Article <i class="fas fa-arrow-right"></i></span>
-      </div>
-    </article>
-
-    <article class="blog-card" data-blog-idx="2">
-      <div class="blog-thumb"><i class="fab fa-react blog-thumb-icon"></i><span class="blog-category">React</span></div>
-      <div class="blog-body">
-        <div class="blog-meta"><span><i class="far fa-calendar"></i>Nov 2025</span><span><i class="far fa-clock"></i>6 min</span></div>
-        <h3 class="blog-title">From JavaScript to React: What Actually Changes</h3>
-        <p class="blog-excerpt">The mental model shift from vanilla JS to component-based thinking — practical examples with hooks and state.</p>
-        <span class="blog-read-more">Read Article <i class="fas fa-arrow-right"></i></span>
-      </div>
-    </article>
-
-    <article class="blog-card" data-blog-idx="3">
-      <div class="blog-thumb"><i class="fas fa-shield-alt blog-thumb-icon"></i><span class="blog-category">Security</span></div>
-      <div class="blog-body">
-        <div class="blog-meta"><span><i class="far fa-calendar"></i>Oct 2025</span><span><i class="far fa-clock"></i>8 min</span></div>
-        <h3 class="blog-title">PHP Security in 2025: Protecting Against Common Attacks</h3>
-        <p class="blog-excerpt">SQL injection, XSS, CSRF, and session hijacking — and how Laravel's built-in tools protect against them.</p>
-        <span class="blog-read-more">Read Article <i class="fas fa-arrow-right"></i></span>
-      </div>
-    </article>
-
-    <article class="blog-card" data-blog-idx="4">
-      <div class="blog-thumb"><i class="fas fa-chart-line blog-thumb-icon"></i><span class="blog-category">Career</span></div>
-      <div class="blog-body">
-        <div class="blog-meta"><span><i class="far fa-calendar"></i>Sep 2025</span><span><i class="far fa-clock"></i>4 min</span></div>
-        <h3 class="blog-title">Learning to Code in Africa: Resources That Actually Work</h3>
-        <p class="blog-excerpt">Finding quality learning resources with limited bandwidth and the tools that helped me build real skills in Zambia.</p>
-        <span class="blog-read-more">Read Article <i class="fas fa-arrow-right"></i></span>
-      </div>
-    </article>
-
-    <article class="blog-card" data-blog-idx="5">
-      <div class="blog-thumb"><i class="fab fa-python blog-thumb-icon"></i><span class="blog-category">Python</span></div>
-      <div class="blog-body">
-        <div class="blog-meta"><span><i class="far fa-calendar"></i>Aug 2025</span><span><i class="far fa-clock"></i>5 min</span></div>
-        <h3 class="blog-title">Automating the Boring Stuff: Python Scripts I Actually Use</h3>
-        <p class="blog-excerpt">Real-world automation — file renaming, CSV cleaning, web scraping, and email notifications that save hours of work.</p>
-        <span class="blog-read-more">Read Article <i class="fas fa-arrow-right"></i></span>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<!-- ═══ CONTACT ═══════════════════════════════════════════= -->
-<section id="contact">
-  <div class="section-label reveal">Let's Talk</div>
-  <h2 class="section-title reveal">Get In <span>Touch</span></h2>
-  <div class="divider reveal"></div>
-  <p class="section-sub reveal">Have a project in mind or want to collaborate? I'd love to hear from you. You'll receive an auto-reply confirming your message.</p>
-  <div class="contact-layout">
-    <div class="contact-info stagger">
-      <div class="contact-info-card">
-        <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
-        <div class="contact-info-text"><h4>Email</h4><a id="contact-email-link" href="mailto:mukuba950@gmail.com"><span id="contact-email-text">mukuba950@gmail.com</span></a></div>
-      </div>
-      <div class="contact-info-card">
-        <div class="contact-info-icon"><i class="fas fa-phone"></i></div>
-        <div class="contact-info-text"><h4>Phone</h4><a id="contact-phone-link" href="tel:+260969508654"><span id="contact-phone-text">+260 96 950 8654</span></a></div>
-      </div>
-      <div class="contact-info-card">
-        <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
-        <div class="contact-info-text"><h4>Location</h4><p id="contact-location-text">Lusaka, Zambia</p></div>
-      </div>
-      <div class="contact-info-card">
-        <div class="contact-info-icon"><i class="fas fa-reply"></i></div>
-        <div class="contact-info-text"><h4>Auto-Reply</h4><p>You'll get a confirmation within seconds</p></div>
-      </div>
-      <div class="contact-social">
-        <a href="https://github.com/MK7-SIETE" target="_blank" rel="noopener" class="contact-social-btn social-github" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/betsaleel-mukuba" target="_blank" rel="noopener" class="contact-social-btn social-linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://facebook.com/betsa.mukuba" target="_blank" rel="noopener" class="contact-social-btn social-facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://wa.me/260969508654" target="_blank" rel="noopener" class="contact-social-btn social-whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-      </div>
     </div>
-    <div class="contact-form-card reveal-right">
-      <h3 class="form-title">Send Me a Message</h3>
-      <form id="contact-form" novalidate>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="col" style="margin:0 auto;">
+      <div class="eyebrow reveal">Let's Talk</div>
+      <h2 class="section-heading reveal">Get In <em>Touch</em></h2>
+      <p class="section-lede reveal">Have a project in mind? Send a message below, or reach out directly.</p>
+    </div>
+    <div class="col-wide contact-grid reveal" style="margin:0 auto;">
+
+      <form id="contact-form" class="contact-form">
+        <div class="form-grid">
+          <div class="form-row">
+            <label for="cf-name">Name <span class="req">*</span></label>
+            <input type="text" id="cf-name" name="from_name" required/>
+          </div>
+          <div class="form-row">
+            <label for="cf-email">Email <span class="req">*</span></label>
+            <input type="email" id="cf-email" name="reply_to" required/>
+          </div>
+        </div>
         <div class="form-row">
-          <div class="form-group"><label for="cf-name">Full Name <span style="color:#f87171">*</span></label><input type="text" id="cf-name" name="name" placeholder="Your full name" required/></div>
-          <div class="form-group"><label for="cf-email">Email Address <span style="color:#f87171">*</span></label><input type="email" id="cf-email" name="email" placeholder="you@example.com" required/></div>
+          <label for="cf-subject">Subject <span class="req">*</span></label>
+          <input type="text" id="cf-subject" name="subject" required/>
         </div>
-        <div class="form-group"><label for="cf-subject">Subject</label>
-          <select id="cf-subject" name="subject">
-            <option value="">Select a topic...</option>
-            <option>Project Collaboration</option>
-            <option>Freelance Work</option>
-            <option>Job Opportunity</option>
-            <option>General Enquiry</option>
-            <option>Other</option>
-          </select>
+        <div class="form-row">
+          <label for="cf-message">Message <span class="req">*</span></label>
+          <textarea id="cf-message" name="message" rows="5" required></textarea>
         </div>
-        <div class="form-group"><label for="cf-message">Message <span style="color:#f87171">*</span></label><textarea id="cf-message" name="message" placeholder="Tell me about your project or idea..." rows="5" required></textarea></div>
-        <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> Send Message</button>
-        <p class="form-note"><i class="fas fa-shield-alt"></i> You'll receive an automatic reply confirming your message was received.</p>
-        <div id="form-success" class="form-success"><i class="fas fa-check-circle"></i>Message sent! Check your inbox for a confirmation. I'll reply within 24 hours.</div>
-        <div id="form-error" style="display:none;color:#f87171;font-size:0.82rem;margin-top:0.75rem;padding:0.75rem 1rem;background:rgba(248,113,113,0.08);border:1px solid rgba(248,113,113,0.25);border-radius:6px;"></div>
+        <div class="form-foot">
+          <button type="submit" class="btn btn-primary" id="cf-submit">
+            Send Message
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+          </button>
+          <p class="form-status" id="cf-status" role="status" aria-live="polite"></p>
+        </div>
       </form>
-    </div>
-  </div>
-</section>
 
-<!-- ═══ FOOTER ════════════════════════════════════════════= -->
-<footer>
-  <div class="footer-inner">
-    <div class="footer-top">
-      <div>
-        <div class="footer-brand-name">Betsaleel<span>.</span></div>
-        <p class="footer-brand-desc">Software Engineer & Full Stack Developer based in Lusaka, Zambia. Building modern digital experiences with precision and purpose.</p>
-      </div>
-      <div>
-        <div class="footer-col-title">Navigation</div>
-        <nav class="footer-links"><a href="#hero">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#skills">Skills</a></nav>
-      </div>
-      <div>
-        <div class="footer-col-title">Work</div>
-        <nav class="footer-links"><a href="#projects">Projects</a><a href="#blog">Blog</a><a href="#contact">Contact</a><span onclick="document.querySelector('.cv-download-btn').click()">Download CV</span></nav>
-      </div>
-      <div>
-        <div class="footer-col-title">Connect</div>
-        <nav class="footer-links">
-          <a href="https://github.com/MK7-SIETE" target="_blank" rel="noopener" class="social-github"><i class="fab fa-github"></i> GitHub</a>
-          <a href="https://linkedin.com/in/betsaleel-mukuba" target="_blank" rel="noopener" class="social-linkedin"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
-          <a href="https://facebook.com/betsa.mukuba" target="_blank" rel="noopener" class="social-facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
-          <a href="https://wa.me/260969508654" target="_blank" rel="noopener" class="social-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-        </nav>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p class="footer-copy">&copy; 2026 <span id="footer-name">Betsaleel Mukuba</span>. All rights reserved.</p>
-      <span id="footer-admin-btn" class="footer-admin-link" title="Admin Panel"><i class="fas fa-lock"></i> Admin</span>
-    </div>
-  </div>
-</footer>
-
-<div id="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></div>
-
-<!-- ═══ POPUP: PROJECT ════════════════════════════════════= -->
-<div id="popup-project" class="popup-overlay" role="dialog" aria-modal="true">
-  <div class="popup-box">
-    <div class="popup-header">
-      <div class="popup-header-left">
-        <div class="popup-header-icon"></div>
-        <div><div class="popup-header-title"></div><div class="popup-header-sub"></div></div>
-      </div>
-      <button class="popup-close" aria-label="Close"><i class="fas fa-times"></i></button>
-    </div>
-    <div class="popup-body">
-      <div class="popup-status-row"></div>
-      <div class="popup-section-label">Overview</div>
-      <p class="popup-text popup-desc"></p>
-      <div class="popup-divider"></div>
-      <div class="popup-section-label">Key Features</div>
-      <ul class="popup-highlights" style="list-style:none;padding:0;display:flex;flex-direction:column;gap:0.2rem"></ul>
-      <div class="popup-divider"></div>
-      <div class="popup-section-label">Tech Stack</div>
-      <div class="popup-tags popup-tech-tags"></div>
-      <div class="popup-links"></div>
-    </div>
-  </div>
-</div>
-
-<!-- ═══ POPUP: SERVICE ════════════════════════════════════= -->
-<div id="popup-service" class="popup-overlay" role="dialog" aria-modal="true">
-  <div class="popup-box">
-    <div class="popup-header">
-      <div class="popup-header-left">
-        <div class="popup-header-icon"></div>
-        <div><div class="popup-header-title"></div><div class="popup-header-sub"></div></div>
-      </div>
-      <button class="popup-close" aria-label="Close"><i class="fas fa-times"></i></button>
-    </div>
-    <div class="popup-body">
-      <div class="popup-section-label">About This Service</div>
-      <p class="popup-text popup-desc"></p>
-      <div class="popup-divider"></div>
-      <div class="popup-section-label">What You Get</div>
-      <ul class="popup-what" style="list-style:none;padding:0;display:flex;flex-direction:column;gap:0.2rem"></ul>
-      <div class="popup-divider"></div>
-      <div class="popup-section-label">Technologies Used</div>
-      <div class="popup-tags popup-tech-tags"></div>
-      <div class="popup-links">
-        <a href="#contact" class="popup-btn popup-btn-primary" onclick="closePopup('popup-service')"><i class="fas fa-paper-plane"></i> Get a Quote</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ═══ POPUP: SKILL ══════════════════════════════════════= -->
-<div id="popup-skill" class="popup-overlay" role="dialog" aria-modal="true">
-  <div class="popup-box">
-    <div class="popup-header">
-      <div class="popup-header-left">
-        <div class="popup-header-icon"></div>
-        <div><div class="popup-header-title"></div><div class="popup-header-sub"></div></div>
-      </div>
-      <button class="popup-close" aria-label="Close"><i class="fas fa-times"></i></button>
-    </div>
-    <div class="popup-body">
-      <div class="popup-section-label">About This Skill</div>
-      <p class="popup-text popup-desc"></p>
-      <div class="popup-divider"></div>
-      <div class="popup-section-label">How I Use It</div>
-      <ul class="popup-uses" style="list-style:none;padding:0;display:flex;flex-direction:column;gap:0.15rem"></ul>
-      <div class="popup-links popup-skill-links"></div>
-    </div>
-  </div>
-</div>
-
-<!-- ═══ POPUP: BLOG ═══════════════════════════════════════= -->
-<div id="popup-blog" class="popup-overlay" role="dialog" aria-modal="true">
-  <div class="popup-box">
-    <div class="popup-header">
-      <div class="popup-header-left">
-        <div class="popup-header-icon"></div>
-        <div><div class="popup-header-title"></div><div class="popup-header-sub"></div></div>
-      </div>
-      <button class="popup-close" aria-label="Close"><i class="fas fa-times"></i></button>
-    </div>
-    <div class="popup-body">
-      <div class="blog-popup-meta"></div>
-      <div class="popup-section-label">Summary</div>
-      <p class="popup-text popup-excerpt"></p>
-      <div class="popup-divider"></div>
-      <div class="popup-section-label">Article Preview</div>
-      <p class="popup-text popup-blog-content"></p>
-      <div class="popup-links">
-        <a href="#" target="_blank" rel="noopener" class="popup-blog-link popup-btn popup-btn-primary"><i class="fas fa-external-link-alt"></i> Read Full Article</a>
-        <button class="popup-btn popup-btn-outline" onclick="closePopup('popup-blog')"><i class="fas fa-times"></i> Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ═══ ADMIN PANEL ═══════════════════════════════════════= -->
-<div id="admin-overlay" role="dialog" aria-modal="true" aria-label="Admin Panel">
-  <div class="admin-modal">
-    <div class="admin-header">
-      <div class="admin-header-left">
-        <div class="admin-header-icon"><i class="fas fa-cog"></i></div>
-        <div><h2>Admin Panel</h2><p>Portfolio Content Manager</p></div>
-      </div>
-      <button class="admin-close" id="admin-close" aria-label="Close"><i class="fas fa-times"></i></button>
-    </div>
-
-    <!-- LOGIN -->
-    <div id="admin-login" style="display:flex">
-      <i class="fas fa-shield-alt" style="font-size:2.5rem;color:var(--steel-light)"></i>
-      <h3>Admin Access</h3>
-      <p>Enter your admin password to manage your portfolio content.</p>
-      <input type="password" id="admin-pass" placeholder="Enter password..." autocomplete="current-password" maxlength="128"/>
-      <div id="login-error" class="login-error" style="display:none"><i class="fas fa-exclamation-circle"></i> Incorrect password. Try again.</div>
-      <button class="btn-login" id="admin-login-btn"><i class="fas fa-unlock"></i> Login</button>
-      <p style="font-size:0.72rem;color:var(--muted);margin-top:0.75rem;text-align:center"><i class="fas fa-lock" style="margin-right:4px"></i>3 wrong attempts locks access for 15 minutes</p>
-    </div>
-
-    <!-- PANEL -->
-    <div id="admin-panel">
-      <div class="admin-tabs">
-        <button class="admin-tab active" data-tab="personal"><i class="fas fa-user"></i> Personal</button>
-        <button class="admin-tab" data-tab="photos"><i class="fas fa-image"></i> Photos & CV</button>
-        <button class="admin-tab" data-tab="contact"><i class="fas fa-address-card"></i> Contact</button>
-        <button class="admin-tab" data-tab="email"><i class="fas fa-envelope"></i> Email Setup</button>
-        <button class="admin-tab" data-tab="appearance"><i class="fas fa-palette"></i> Theme</button>
-        <button class="admin-tab" data-tab="security"><i class="fas fa-shield-alt"></i> Security</button>
+      <div class="contact-side">
+        <div class="contact-side-title">Prefer a direct line?</div>
+        <a href="mailto:mukuba950@gmail.com" class="contact-panel">
+          <div class="contact-panel-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 6 10-6"/></svg>
+          </div>
+          <div>
+            <div class="contact-panel-label">Email</div>
+            <div class="contact-panel-value">mukuba950@gmail.com</div>
+          </div>
+        </a>
+        <a href="https://wa.me/260777387056" target="_blank" rel="noopener" class="contact-panel">
+          <div class="contact-panel-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 01-12.3 7.6L4 20l1-4.5A8.5 8.5 0 1121 11.5z"/></svg>
+          </div>
+          <div>
+            <div class="contact-panel-label">WhatsApp</div>
+            <div class="contact-panel-value">+260 77 738 7056</div>
+          </div>
+        </a>
       </div>
 
-      <!-- Personal -->
-      <div class="admin-tab-content active" id="tab-personal">
-        <div class="admin-section-divider">Identity</div>
-        <div class="admin-grid-2">
-          <div class="admin-field"><label>Full Name</label><input type="text" id="af-name"/></div>
-          <div class="admin-field"><label>Location</label><input type="text" id="af-location"/></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="col-wide" style="margin:0 auto;">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-name">Betsaleel<span>.</span></div>
+          <p class="footer-brand-desc">Software Engineer &amp; Full Stack Developer based in Lusaka, Zambia.</p>
         </div>
-        <div class="admin-section-divider">Typed Titles (rotating in hero)</div>
-        <div class="admin-grid-2">
-          <div class="admin-field"><label>Title 1</label><input type="text" id="af-title1"/></div>
-          <div class="admin-field"><label>Title 2</label><input type="text" id="af-title2"/></div>
-          <div class="admin-field"><label>Title 3</label><input type="text" id="af-title3"/></div>
-          <div class="admin-field"><label>Title 4</label><input type="text" id="af-title4"/></div>
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <nav class="footer-links"><a href="#about">About</a><a href="#services">Services</a></nav>
         </div>
-        <div class="admin-field"><label>Hero Headline</label><input type="text" id="af-headline"/></div>
-        <div class="admin-field"><label>Bio Paragraph 1</label><textarea id="af-bio" rows="4"></textarea></div>
-        <div class="admin-field"><label>Bio Paragraph 2</label><textarea id="af-bio2" rows="3"></textarea></div>
-        <div class="admin-section-divider">Stats</div>
-        <div class="admin-grid-2">
-          <div class="admin-field"><label>Years Experience</label><input type="number" id="af-years" min="0"/></div>
-          <div class="admin-field"><label>Projects Count</label><input type="number" id="af-projects" min="0"/></div>
+        <div>
+          <div class="footer-col-title">Work</div>
+          <nav class="footer-links"><a href="#projects">Projects</a><a href="#contact">Contact</a><a href="./assets/Betsaleel_Mukuba_CV.pdf" download>Download CV</a></nav>
         </div>
-        <div class="admin-btn-row"><button class="admin-save-btn" id="admin-save-personal"><i class="fas fa-save"></i> Save Changes</button></div>
-        <div id="msg-personal" class="admin-success-msg"><i class="fas fa-check-circle"></i> Personal info updated!</div>
-      </div>
-
-      <!-- Photos & CV -->
-      <div class="admin-tab-content" id="tab-photos">
-        <div class="admin-section-divider">Profile Photo (Hero)</div>
-        <img id="admin-photo-preview" src="./assets/mwa.png" alt="Profile" class="admin-photo-preview"/>
-        <div class="admin-field"><label>Upload New Profile Photo</label><input type="file" id="af-photo" accept="image/*"/></div>
-        <div class="admin-section-divider">About Section Photo</div>
-        <div class="admin-field"><label>Upload About Photo</label><input type="file" id="af-about-photo" accept="image/*"/></div>
-        <div class="admin-section-divider">Resume / CV</div>
-        <div class="admin-field"><label>Upload CV (PDF)</label><input type="file" id="af-cv" accept=".pdf"/></div>
-        <div id="msg-photo" class="admin-success-msg"><i class="fas fa-check-circle"></i> File updated!</div>
-      </div>
-
-      <!-- Contact -->
-      <div class="admin-tab-content" id="tab-contact">
-        <div class="admin-section-divider">Contact Details</div>
-        <div class="admin-grid-2">
-          <div class="admin-field"><label>Email Address</label><input type="email" id="af-email"/></div>
-          <div class="admin-field"><label>Phone Number</label><input type="text" id="af-phone"/></div>
-        </div>
-        <div class="admin-section-divider">Social Media Links</div>
-        <div class="admin-field"><label>GitHub URL</label><input type="url" id="af-github"/></div>
-        <div class="admin-field"><label>LinkedIn URL</label><input type="url" id="af-linkedin"/></div>
-        <div class="admin-field"><label>Facebook URL</label><input type="url" id="af-facebook"/></div>
-        <div class="admin-field"><label>WhatsApp Link</label><input type="url" id="af-whatsapp"/></div>
-        <div class="admin-btn-row"><button class="admin-save-btn" id="admin-save-contact"><i class="fas fa-save"></i> Save Contact Info</button></div>
-        <div id="msg-contact" class="admin-success-msg"><i class="fas fa-check-circle"></i> Contact info updated!</div>
-      </div>
-
-      <!-- Email Setup -->
-      <div class="admin-tab-content" id="tab-email">
-        <div class="admin-info-box">
-          <p><strong>EmailJS Setup:</strong> This portfolio uses <strong>EmailJS</strong> for contact form sending and auto-replies. It's free, works with Gmail, and requires no server.<br/><br/>
-          1. Sign up free at <strong>emailjs.com</strong><br/>
-          2. Create a service (connect <code>mukuba950@gmail.com</code>)<br/>
-          3. Create two email templates (contact + auto-reply)<br/>
-          4. Paste your IDs below and click Save<br/><br/>
-          See <strong>DEPLOYMENT.md</strong> for full step-by-step instructions.</p>
-        </div>
-        <div class="admin-section-divider">EmailJS Credentials</div>
-        <div class="admin-field"><label>Service ID</label><input type="text" id="af-ejs-service" placeholder="service_xxxxxxx"/></div>
-        <div class="admin-field"><label>Contact Template ID</label><input type="text" id="af-ejs-template" placeholder="template_xxxxxxx"/></div>
-        <div class="admin-field"><label>Auto-Reply Template ID</label><input type="text" id="af-ejs-autoreply" placeholder="template_xxxxxxx"/></div>
-        <div class="admin-field"><label>Public Key</label><input type="text" id="af-ejs-pubkey" placeholder="xxxxxxxxxxxxxxx"/></div>
-        <div class="admin-btn-row"><button class="admin-save-btn" id="admin-save-email"><i class="fas fa-save"></i> Save Email Config</button></div>
-        <div id="msg-email" class="admin-success-msg"><i class="fas fa-check-circle"></i> Email config saved! Reload to activate.</div>
-      </div>
-
-      <!-- Appearance -->
-      <div class="admin-tab-content" id="tab-appearance">
-        <div class="admin-section-divider">Color Theme</div>
-        <p style="font-size:0.8rem;color:var(--muted);margin-bottom:1rem">Switch the portfolio between dark and light mode.</p>
-        <div class="admin-btn-row">
-          <button class="admin-save-btn" id="admin-theme-dark"><i class="fas fa-moon"></i> Dark Mode</button>
-          <button class="admin-save-btn" id="admin-theme-light" style="background:var(--steel-pale);color:var(--navy)"><i class="fas fa-sun"></i> Light Mode</button>
-        </div>
-        <div id="msg-appearance" class="admin-success-msg"><i class="fas fa-check-circle"></i> Theme applied!</div>
-      </div>
-
-      <!-- Security -->
-      <div class="admin-tab-content" id="tab-security">
-        <div class="admin-section-divider">Change Admin Password</div>
-        <div class="admin-field"><label>New Password <span style="font-size:0.72rem;color:var(--muted)">(min. 8 characters)</span></label><input type="password" id="af-adminpass" placeholder="Enter new password" minlength="8" maxlength="128"/></div>
-        <div class="admin-btn-row"><button class="admin-save-btn" id="admin-save-security"><i class="fas fa-key"></i> Update Password</button></div>
-        <div id="msg-security" class="admin-success-msg"><i class="fas fa-check-circle"></i> Password updated!</div>
-        <div class="admin-section-divider" style="margin-top:2rem">Danger Zone</div>
-        <p style="font-size:0.8rem;color:var(--muted);margin-bottom:1rem">Reset ALL customisations back to factory defaults.</p>
-        <div class="admin-btn-row">
-          <button class="admin-reset-btn" id="admin-reset-all"><i class="fas fa-trash"></i> Reset All Data</button>
-          <button class="admin-save-btn" id="admin-logout" style="background:rgba(255,255,255,0.1)"><i class="fas fa-sign-out-alt"></i> Logout</button>
+        <div>
+          <div class="footer-col-title">Connect</div>
+          <nav class="footer-links">
+            <a href="https://github.com/MK7-SIETE" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://linkedin.com/in/betsaleel-mukuba" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://wa.me/260777387056" target="_blank" rel="noopener">WhatsApp</a>
+          </nav>
         </div>
       </div>
+      <div class="footer-bottom">
+        <p>© 2026 Betsaleel Mukuba. All rights reserved.</p>
+      </div>
     </div>
-  </div>
-</div>
+  </footer>
 
-<!-- EmailJS SDK -->
+</main>
+
+<button id="back-to-top" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+</button>
+
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="js/main.js"></script>
 </body>
