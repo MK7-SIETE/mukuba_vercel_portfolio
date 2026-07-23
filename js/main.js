@@ -1,13 +1,8 @@
-/* Betsaleel Mukuba — Portfolio
-   Static site interactions: mobile nav, active-section tracking,
-   scroll reveal, stat counters, back-to-top, and the EmailJS-powered
-   contact form. No custom backend. */
-
-/* ---------- EmailJS config — replace with your own keys ---------- */
-const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
-const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';        // sends the message to you
-const EMAILJS_AUTOREPLY_TEMPLATE_ID = '';               // optional: sends a confirmation to the visitor. Leave blank to skip.
+/* ---------- EmailJS config — replace with my own keys ---------- */
+const EMAILJS_PUBLIC_KEY = 'IV6EkLZ-dsih3bWDn';
+const EMAILJS_SERVICE_ID = 'service_7ou24do';
+const EMAILJS_TEMPLATE_ID = 'template_hqzo3tx';        
+const EMAILJS_AUTOREPLY_TEMPLATE_ID = 'template_nzzdl9d';               
 
 document.addEventListener('DOMContentLoaded', () => {
 
