@@ -233,7 +233,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{
 .project-row:last-child{ padding-bottom:0; }
 .project-row:nth-child(even) .project-media{ order:2; }
 .project-media{ border-radius:10px; overflow:hidden; border:1px solid var(--line); aspect-ratio:4/3; }
-.project-media img{ width:100%; height:100%; object-fit:cover; }
+.project-media img{ width:100%; height:100%; object-fit:contain; }
 .project-meta{ display:flex; align-items:center; gap:12px; font-family:var(--font-mono); font-size:0.74rem; color:var(--slate); margin-bottom:14px; text-transform:uppercase; letter-spacing:.05em; }
 .project-name{ font-size:1.5rem; font-weight:600; margin-bottom:12px; }
 .project-desc{ color:var(--ink-soft); margin-bottom:18px; max-width:50ch; }
